@@ -2,8 +2,22 @@
     "name": "myanmarcyberyouths/laravel-mongodb-passport",
     "description": "Laravel Passport for MongoDB",
     "license": "MIT",
-    "keywords": [],
+    "type": "library",
+    "homepage": "https://github.com/myanmarcyberyouths/passport-mongodb",
+    "keywords": [
+        "laravel",
+        "passport",
+        "mongodb"
+    ],
     "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Aung Myat Moe",
+            "email": "aungmyatmoe834@gmail.com",
+            "homepage": "http://github.com/amm834",
+            "role": "CTO"
+        }
+    ],
     "require": {
         "php": ">=8.2",
         "illuminate/support": "^10.43",
