@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require myanmarcyberyouths/laravel-mongodb-passport
+composer require myanmarcyberyouths/passport-mongodb
 ```
 
 ## Usage
