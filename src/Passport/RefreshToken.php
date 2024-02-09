@@ -1,8 +1,10 @@
 <?php
 
-namespace Breeze\MongoDB\Passport;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport;
 
+use Laravel\Passport\Passport;
 use MongoDB\Laravel\Eloquent\Model;
+
 class RefreshToken extends Model
 {
     /**
@@ -56,7 +58,7 @@ class RefreshToken extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function accessToken()
+    public function accessToken(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Passport::tokenModel());
     }
@@ -66,7 +68,7 @@ class RefreshToken extends Model
      *
      * @return bool
      */
-    public function revoke()
+    public function revoke(): bool
     {
         return $this->forceFill(['revoked' => true])->save();
     }
@@ -76,7 +78,7 @@ class RefreshToken extends Model
      *
      * @return bool
      */
-    public function transient()
+    public function transient(): bool
     {
         return false;
     }

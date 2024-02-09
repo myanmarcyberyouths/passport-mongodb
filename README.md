@@ -9,7 +9,7 @@ composer require myanmarcyberyouths/laravel-mongodb-passport
 ## Usage
 
 ```php
-use Breeze\MongoDB\Auth\User as Authenticatable;
+use MyanmarCyberYouths\Laravel\MongoDB\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {

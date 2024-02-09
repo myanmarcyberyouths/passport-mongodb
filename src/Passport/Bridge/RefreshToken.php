@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Passport\Bridge;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport\Bridge;
 
 use MongoDB\Laravel\Eloquent\Model;
 use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;

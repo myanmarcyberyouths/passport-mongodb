@@ -1,41 +1,81 @@
 {
-    "name": "myanmarcyberyouths/laravel-mongodb-passport",
+    "name": "myanmarcyberyouths/passport-mongodb",
     "description": "Laravel Passport for MongoDB",
     "license": "MIT",
     "type": "library",
-    "homepage": "https://github.com/myanmarcyberyouths/passport-mongodb",
+    "homepage": "https://github.com/myanmarcyberyouths/passport-mongo",
     "keywords": [
         "laravel",
         "passport",
-        "mongodb"
+        "mongodb",
+        "eloquent",
+        "mongo",
+        "database",
+        "model"
     ],
     "version": "1.0.0",
     "authors": [
         {
             "name": "Aung Myat Moe",
             "email": "aungmyatmoe834@gmail.com",
-            "homepage": "http://github.com/amm834",
+            "homepage": "https://github.com/amm834",
             "role": "CTO"
         }
     ],
     "require": {
         "php": ">=8.2",
+        "ext-mongodb": "^1.15",
+        "illuminate/contracts": "^10.0",
         "illuminate/support": "^10.43",
         "laravel/passport": "^11.10",
         "mongodb/laravel-mongodb": "^4.1"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.8",
+        "larastan/larastan": "^2.0.1",
+        "orchestra/testbench": "^8.8",
+        "pestphp/pest": "^2.20",
+        "pestphp/pest-plugin-arch": "^2.5",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "spatie/laravel-ray": "^1.26"
+    },
     "autoload": {
         "psr-4": {
-            "Breeze\\MongoDB\\": "src"
+            "MyanmarCyberYouths\\Laravel\\MongoDB\\": "src"
         }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Breeze\\MongoDB\\MongodbPassportServiceProvider"
-            ]
+                "MyanmarCyberYouths\\Laravel\\MongoDB\\PassportMongoDBServiceProvider"
+            ],
+            "aliases": {
+                "Passport": "MyanmarCyberYouths\\Laravel\\MongoDB\\Facades\\Passport"
+            }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Passport;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport;
 
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;

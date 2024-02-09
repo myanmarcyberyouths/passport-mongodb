@@ -1,19 +1,19 @@
 <?php
 
-namespace Breeze\MongoDB;
+namespace MyanmarCyberYouths\Laravel\MongoDB;
 
-use Breeze\MongoDB\Commands\ClientCommand;
-use Breeze\MongoDB\Commands\InstallCommand;
-use Breeze\MongoDB\Passport\AuthCode;
-use Breeze\MongoDB\Passport\Bridge\RefreshTokenRepository;
-use Breeze\MongoDB\Passport\Client;
-use Breeze\MongoDB\Passport\PersonalAccessClient;
-use Breeze\MongoDB\Passport\Token;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Passport\Bridge\RefreshTokenRepository as PassportRefreshTokenRepository;
 use Laravel\Passport\Passport;
+use MyanmarCyberYouths\Laravel\MongoDB\Commands\ClientCommand;
+use MyanmarCyberYouths\Laravel\MongoDB\Commands\InstallCommand;
+use MyanmarCyberYouths\Laravel\MongoDB\Passport\AuthCode;
+use MyanmarCyberYouths\Laravel\MongoDB\Passport\Bridge\RefreshTokenRepository;
+use MyanmarCyberYouths\Laravel\MongoDB\Passport\Client;
+use MyanmarCyberYouths\Laravel\MongoDB\Passport\PersonalAccessClient;
+use MyanmarCyberYouths\Laravel\MongoDB\Passport\Token;
 
-class MongodbPassportServiceProvider extends ServiceProvider
+class PassportMongoDBServiceProvider extends ServiceProvider
 {
     public function register(): void
     {

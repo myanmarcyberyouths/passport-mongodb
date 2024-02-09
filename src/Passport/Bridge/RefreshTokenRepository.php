@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Passport\Bridge;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport\Bridge;
 
 use Laravel\Passport\Bridge\RefreshTokenRepository as BaseRefreshTokenRepository;
 use Laravel\Passport\Events\RefreshTokenCreated;

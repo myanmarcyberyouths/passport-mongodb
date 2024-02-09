@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Passport;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport;
 
 use MongoDB\Laravel\Eloquent\Model;
 
@@ -57,7 +57,7 @@ class Token extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function client()
+    public function client(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Client::class);
     }
@@ -67,7 +67,7 @@ class Token extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         $provider = config('auth.guards.api.provider');
 
@@ -81,10 +81,10 @@ class Token extends Model
      *
      * @return bool
      */
-    public function can($scope)
+    public function can($scope): bool
     {
         return in_array('*', $this->scopes) ||
-        array_key_exists($scope, array_flip($this->scopes));
+            array_key_exists($scope, array_flip($this->scopes));
     }
 
     /**
@@ -93,7 +93,7 @@ class Token extends Model
      * @param string $scope
      * @return bool
      */
-    public function cant($scope)
+    public function cant($scope): bool
     {
         return !$this->can($scope);
     }
@@ -103,7 +103,7 @@ class Token extends Model
      *
      * @return void
      */
-    public function revoke()
+    public function revoke(): void
     {
         $this->forceFill(['revoked' => true])->save();
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Passport;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Passport;
 
 use MongoDB\Laravel\Eloquent\Model;
 class PersonalAccessClient extends Model

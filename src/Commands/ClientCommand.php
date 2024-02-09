@@ -1,6 +1,6 @@
 <?php
 
-namespace Breeze\MongoDB\Commands;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Commands;
 
 use Laravel\Passport\Client;
 use Laravel\Passport\ClientRepository;

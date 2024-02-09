@@ -1,11 +1,8 @@
 <?php
 
-namespace Breeze\MongoDB\Commands;
+namespace MyanmarCyberYouths\Laravel\MongoDB\Commands;
 
-use Laravel\Passport\Client;
-use Laravel\Passport\ClientRepository;
 use Laravel\Passport\Console\InstallCommand as BaseInstallCommand;
-use Laravel\Passport\Passport;
 
 class InstallCommand extends BaseInstallCommand
 {
