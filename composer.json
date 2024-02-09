@@ -3,7 +3,7 @@
     "description": "Laravel Passport for MongoDB",
     "license": "MIT",
     "type": "library",
-    "homepage": "https://github.com/myanmarcyberyouths/passport-mongo",
+    "homepage": "https://github.com/myanmarcyberyouths/passport-mongodb",
     "keywords": [
         "laravel",
         "passport",
