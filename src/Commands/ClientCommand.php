@@ -79,7 +79,7 @@ class ClientCommand extends BaseClientCommand
      *
      * @return void
      */
-    protected function outputMongodbClientDetails(Client|\Breeze\MongoDB\Passport\Client $client): void
+    protected function outputMongodbClientDetails(Client|\MyanmarCyberYouths\Laravel\MongoDB\Passport\Client $client): void
     {
         if (Passport::$hashesClientSecrets) {
             $this->line('<comment>Here is your new client secret. This is the only time it will be shown so don\'t lose it!</comment>');
